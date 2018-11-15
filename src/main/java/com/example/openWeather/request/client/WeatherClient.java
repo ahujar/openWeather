@@ -1,6 +1,6 @@
 package com.example.openWeather.request.client;
 
-import org.json.JSONObject;
+import com.example.openWeather.request.dto.WeatherDetails;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,5 +13,5 @@ public interface WeatherClient {
     @RequestMapping(method = RequestMethod.GET, produces  = {
             MediaType.APPLICATION_JSON_VALUE
     })
-    JSONObject getWeatherDetails(@RequestParam("q") String cityName, @RequestParam("appid") String appkey);
+    WeatherDetails getWeatherDetails(@RequestParam("q") String cityName, @RequestParam("appid") String appkey);
 }

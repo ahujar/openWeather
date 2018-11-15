@@ -25,8 +25,8 @@ public class WeatherControllerTest {
     @Test
     public void getWeatherDetails() throws Exception{
 
-        /*Mockito.when(weatherController.getWeatherDetails("london")).thenReturn(londonWeatherDetails.toString());
-        String weatherDetails = weatherController.getWeatherDetails("london");
-        assertEquals(weatherDetails,londonWeatherDetails.toString());*/
+        //Mockito.when(weatherController.getWeatherDetails("london","b6907d289e10d714a6e88b30761fae22")).thenReturn(londonWeatherDetails.toString());
+        //String weatherDetails = weatherController.getWeatherDetails("london","b6907d289e10d714a6e88b30761fae22");
+        //assertEquals(weatherDetails,londonWeatherDetails.toString());
     }
 }

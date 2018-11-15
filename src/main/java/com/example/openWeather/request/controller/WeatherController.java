@@ -1,6 +1,7 @@
 package com.example.openWeather.request.controller;
 
 import com.example.openWeather.request.client.WeatherClient;
+import com.example.openWeather.request.dto.WeatherDetails;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,10 @@ public class WeatherController {
     }
 
     @RequestMapping(value = "/weather/{city}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
-    public JSONObject getWeatherDetails (@PathVariable("city") String cityName, @RequestParam("appid") String appId){
+    public WeatherDetails getWeatherDetails (@PathVariable("city") String cityName, @RequestParam("appid") String appId){
 
         logger.info("getting details for city :" +cityName);
-        JSONObject weatherDetails = client.getWeatherDetails(cityName, appId);
+        WeatherDetails weatherDetails = client.getWeatherDetails(cityName, appId);
         logger.info(weatherDetails.toString());
         return weatherDetails;
     }
